@@ -20,9 +20,13 @@ model product {
 }
 
 model user {
-  id            Int    @id @default(autoincrement())
-  email         String @db.VarChar(65)
-  alamat        String @db.VarChar(255)
-  nama_lengkap  String @db.VarChar(45)
-  nomor_telepon String @db.VarChar(255)
+  id              Int    @id @default(autoincrement())
+  email           String @db.VarChar(65)
+  alamat          String @db.VarChar(255)
+  nama_lengkap    String @db.VarChar(45)
+  nomor_telepon   String @db.VarChar(255)
+  tanggal_lahir   DateTime?
+  jenis_kelamin   String?
+  pekerjaan       String?
+  tanggal_bergabung DateTime  @default(now())
 }

@@ -22,6 +22,10 @@ const insertUser = async (newUsersData) => {
                 alamat: newUsersData.alamat,
                 email: newUsersData.email,
                 nomor_telepon: newUsersData.nomor_telepon,
+                tanggal_lahir: newUserData.tanggal_lahir,
+                jenis_kelamin: newUserData.jenis_kelamin,
+                pekerjaan: newUserData.pekerjaan,
+                tanggal_bergabung: newUserData.tanggal_bergabung 
             }
         });
         return user;
