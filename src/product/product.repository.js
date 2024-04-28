@@ -23,6 +23,9 @@ const insertProduct = async (newProductsData) => {
                 harga: parseFloat(newProductsData.harga),
                 stok: parseInt(newProductsData.stok), 
                 gambar: newProductsData.gambar,
+                deskripsi:  newProductsData.deskripsi,
+                nilai_pulsa:  parseFloat(newProductsData.nilai_pulsa),
+                operator:  newProductsData.operator
             }
         });
         return product;
@@ -52,6 +55,9 @@ const ubdateProduct = async (id, productData) => {
             harga: parseFloat(productData.harga), 
             stok: parseInt(productData.stok), 
             gambar: productData.gambar,
+            deskripsi:  productData.deskripsi,
+            nilai_pulsa:  parseFloat(productData.nilai_pulsa),
+            operator:  productData.operator
         },
     });
     return product

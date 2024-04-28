@@ -67,7 +67,10 @@ router.put("/:id", async (req, res) => {
         productData.jenis_produk &&
         productData.harga &&
         productData.stok &&
-        productData.gambar
+        productData.gambar &&
+        productData.deskripsi &&
+        productData.nilai_pulsa &&
+        productData.operator 
         )
     ) {
         return res.status(400).send("Some fields are missing")
