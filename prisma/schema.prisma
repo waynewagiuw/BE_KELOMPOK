@@ -8,25 +8,35 @@ datasource db {
 }
 
 model product {
-  id             Int      @id @default(autoincrement())
-  nama_produk    String   @db.VarChar(45)
-  jenis_produk   String   @db.VarChar(45)
-  harga          Float
-  stok           Int      @default(autoincrement())
-  gambar         String   @db.VarChar(255)
-  deskripsi      String   @db.VarChar(255)
-  nilai_pulsa    Float    
-  operator       String   @db.VarChar(45)
+  id                Int      @id @default(autoincrement())
+  nama_produk       String   @db.VarChar(45)
+  jenis_produk      String   @db.VarChar(45)
+  harga             Float
+  stok              Int      @default(autoincrement())
+  gambar            String   @db.VarChar(255)
+  deskripsi         String   @db.VarChar(255)
+  nilai_pulsa       Float    
+  operator          String   @db.VarChar(45)
 }
 
 model user {
-  id              Int    @id @default(autoincrement())
-  email           String @db.VarChar(65)
-  alamat          String @db.VarChar(255)
-  nama_lengkap    String @db.VarChar(45)
-  nomor_telepon   String @db.VarChar(255)
-  tanggal_lahir   DateTime?
-  jenis_kelamin   String?
-  pekerjaan       String?
+  id                Int    @id @default(autoincrement())
+  email             String @db.VarChar(65)
+  alamat            String @db.VarChar(255)
+  nama_lengkap      String @db.VarChar(45)
+  nomor_telepon     String @db.VarChar(255)
+  tanggal_lahir     DateTime?
+  jenis_kelamin     String?
+  pekerjaan         String?
   tanggal_bergabung DateTime  @default(now())
+}
+
+model history {
+  id                 Int      @id @default(autoincrement())
+  tanggal_transasksi DateTime @default(now())
+  nama_produk        String   @db.VarChar(45)
+  jenis_produk       String   @db.VarChar(45)
+  product            product? @relation(fields: [productId], references: [id])
+  productId          Int?
+  deskripsi          String  
 }
