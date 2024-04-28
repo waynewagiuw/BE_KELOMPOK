@@ -8,12 +8,15 @@ datasource db {
 }
 
 model product {
-  id           Int    @id @default(autoincrement())
-  nama_produk  String @db.VarChar(45)
-  jenis_produk String @db.VarChar(45)
-  harga        Float
-  stok         Int    @default(autoincrement())
-  gambar       String @db.VarChar(255)
+  id             Int      @id @default(autoincrement())
+  nama_produk    String   @db.VarChar(45)
+  jenis_produk   String   @db.VarChar(45)
+  harga          Float
+  stok           Int      @default(autoincrement())
+  gambar         String   @db.VarChar(255)
+  deskripsi      String   @db.VarChar(255)
+  nilai_pulsa    Float    
+  operator       String   @db.VarChar(45)
 }
 
 model user {
