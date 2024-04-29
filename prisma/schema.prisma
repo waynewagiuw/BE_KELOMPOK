@@ -36,7 +36,16 @@ model history {
   tanggal_transasksi DateTime @default(now())
   nama_produk        String   @db.VarChar(45)
   jenis_produk       String   @db.VarChar(45)
-  product            product? @relation(fields: [productId], references: [id])
   productId          Int?
   deskripsi          String  
+}
+
+model mission {
+  id                 Int      @id @default(autoincrement())
+  title              String
+  description        String
+  point              Float
+  gambar             String   @db.VarChar(255)
+  logo               String
+  duration           Int
 }
