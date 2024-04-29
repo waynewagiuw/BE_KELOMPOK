@@ -1,7 +1,5 @@
 const express = require('express')
-const prisma = require('../db')
 const router = express.Router();
-
 const { getAllHistorys, getHistoryById, createHistory, deleteHistoryById, ubdateHistoryById } = require("./history.service")
 
 router.get("/", async (req, res) => {

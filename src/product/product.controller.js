@@ -1,7 +1,5 @@
 const express = require('express')
-const prisma = require('../db')
 const router = express.Router();
-
 const { getAllProducts, getProductById, createProduct, deleteProductById, ubdateProductById } = require("./product.service")
 
 router.get("/", async (req, res) => {
