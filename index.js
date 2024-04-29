@@ -12,10 +12,10 @@ app.use('/products', productController);
 const userController = require('./src/user/user.controller');
 app.use('/users', userController);
 
-const historyController = require('./src/user/history.controller');
+const historyController = require('./src/history/history.controller');
 app.use('/historys', userController);
 
-const missionController = require('./src/user/mission.controller');
+const missionController = require('./src/mission/mission.controller');
 app.use('/missions', userController);
 
 
