@@ -1,16 +1,14 @@
-const express = require('express')
-const prisma = require('../db')
+const express = require('express');
 const router = express.Router();
-
-const { getAllHistorys, getHistoryById, createHistory, deleteHistoryById, ubdateHistoryById } = require("./history.service")
+const { getAllMissions, getMissionById, createMission, deleteMissionById, ubdateMissionById } = require("./mission.service")
 
 router.get("/", async (req, res) => {
     try {
-        const historys = await getAllHistorys()
+        const missions = await getAllMissions()
 
         res.status(200).json({
             status: "success get the database",
-            data: historys,
+            data: missions,
         });
     } catch (err) {
         console.error(err);
@@ -19,18 +17,25 @@ router.get("/", async (req, res) => {
 });
 
 router.post("/", async (req, res) => {
-    const newHistorysData = req.body
-    const history = await createHistory(newHistorysData)
-    res.send({
-        data: history,
-        message: "Data berhasil dimasukan"
-    })
+    try {
+        const newMissionsData = req.body;
+        const mission = await createMission(newMissionsData);
+        res.status(201).json({
+            data: mission,
+            message: "Data berhasil dimasukkan"
+        });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({
+            message: "Gagal memproses permintaan"
+        });
+    }
 });
 
 router.delete("/:id", async (req, res) => {
     try {
-        const historyId = (req.params.id)
-        await deleteHistoryById(parseInt(historyId))
+        const missionId = (req.params.id)
+        await deleteMissionById(parseInt(missionId))
 
         res.status(200).json({
             status: "success",
@@ -43,13 +48,13 @@ router.delete("/:id", async (req, res) => {
 });
 
 router.get("/:id", async (req, res) => {
-    const historyId = parseInt(req.params.id);
+    const missionId = parseInt(req.params.id);
     try {
-        const historys = await getHistoryById(parseInt(historyId));
+        const missions = await getMissionById(parseInt(missionId));
 
         res.status(200).json({
             status: "data berhasil didapatkan",
-            data: historys,
+            data: missions,
         });
     } catch (err) {
         console.error(err);
@@ -58,25 +63,27 @@ router.get("/:id", async (req, res) => {
 });
 
 router.put("/:id", async (req, res) => {
-    const historyId = req.params.id;
-    const historyData = req.body;
+    const missionId = req.params.id;
+    const missionData = req.body;
 
     if (
         !(
-            historyData.tanggal_transaksi &&
-            historyData.nama_produk &&
-            historyData.jenis_produk &&
-            historyData.deskripsi
+            missionData.title &&
+            missionData.description &&
+            missionData.point &&
+            missionData.gambar &&
+            missionData.logo &&
+            missionData.duration
         )
     ) {
         return res.status(400).send("Some fields are missing")
     }
     try {
-        const history = await ubdateHistoryById(parseInt(historyId), historyData)
-           
+        const mission = await ubdateMissionById(parseInt(missionId), missionData)
+
         res.send({
             message: "Data berhasil diperbarui",
-            data: history,
+            data: mission,
         });
     } catch (err) {
         console.error(err);
@@ -85,15 +92,15 @@ router.put("/:id", async (req, res) => {
 });
 
 router.patch("/:id", async (req, res) => {
-    const historyId = req.params.id;
-    const historyData = req.body;
+    const missionId = req.params.id;
+    const missionData = req.body;
 
     try {
-        const history = await ubdateHistoryById(parseInt(historyId), historyData)
-           
+        const mission = await ubdateMissionById(parseInt(missionId), missionData)
+
         res.send({
             message: "Data berhasil diperbarui",
-            data: history,
+            data: mission,
         });
     } catch (err) {
         console.error(err);
@@ -101,4 +108,5 @@ router.patch("/:id", async (req, res) => {
     }
 });
 
-module.exports = router
+
+module.exports = router;

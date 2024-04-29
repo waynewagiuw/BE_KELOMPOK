@@ -21,11 +21,6 @@ const insertHistory = async (newHistorysData) => {
                 tanggal_transaksi: new Date(), 
                 nama_produk: newHistorysData.nama_produk,
                 jenis_produk: newHistorysData.jenis_produk,
-                product: {
-                  connect: {
-                    id: newHistorysData.productId 
-                  }
-                },
                 deskripsi: newHistorysData.deskripsi
               }
               
