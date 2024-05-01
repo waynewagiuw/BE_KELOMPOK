@@ -49,3 +49,13 @@ model mission {
   logo               String
   duration           Int
 }
+
+model invite {
+  id                 Int      @id @default(autoincrement())
+  nama_sender        String
+  nama_receiver      String
+  kode_sender        String
+  kode_receiver      String
+  status             String
+  tanggal_bergabung  DateTime  @default(now())
+}

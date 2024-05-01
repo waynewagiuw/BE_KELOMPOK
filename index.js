@@ -18,7 +18,9 @@ app.use('/historys', userController);
 const missionController = require('./src/mission/mission.controller');
 app.use('/missions', userController);
 
+const inviteController = require('./src/invite/invite.controller');
+app.use('/invites', userController);
 
 app.listen(port, () =>
-  console.log(`Server running at http://localhost:${port}`)
+    console.log(`Server running at http://localhost:${port}`)
 );
