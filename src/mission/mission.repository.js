@@ -48,12 +48,12 @@ const ubdateMission = async(id, missionData) => {
             id: parseInt(id),
         },
         data: {
-            title: missionsData.nama_lengkap,
-            description: missionsData.alamat,
-            point: missionsData.email,
-            gambar: missionsData.nomor_telepon,
-            logo: missionData.tanggal_lahir,
-            duration: missionData.jenis_kelamin
+            title: missionData.title,
+            description: missionData.description,
+            point: missionData.point,
+            gambar: missionData.gambar,
+            logo: missionData.logo,
+            duration: missionData.duration
         },
     });
     return mission

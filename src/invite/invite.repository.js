@@ -18,11 +18,11 @@ const insertInvite = async(newInvitesData) => {
     try {
         const invite = await prisma.invite.create({
             data: {
-                nama_sender: newInvitesData.nama_lengkap,
-                nama_receiver: newInvitesData.alamat,
-                kode_sender: newInvitesData.email,
-                kode_receiver: newInvitesData.nomor_telepon,
-                status: newInviteData.tanggal_lahir,
+                nama_sender: newInvitesData.nama_sender,
+                nama_receiver: newInvitesData.nama_receiver,
+                kode_sender: newInvitesData.kode_sender,
+                kode_receiver: newInvitesData.kode_receiver,
+                status: newInvitesData.status,
                 tanggal_bergabung: new Date(),
             }
         });

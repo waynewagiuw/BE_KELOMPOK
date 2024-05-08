@@ -47,7 +47,7 @@ model mission {
   point              Float
   gambar             String   @db.VarChar(255)
   logo               String
-  duration           Int
+  duration           String
 }
 
 model invite {
