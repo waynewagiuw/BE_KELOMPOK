@@ -20,24 +20,144 @@
 				{
 					"name": "POST",
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "nama_produk",
+									"value": "pulsa",
+									"type": "text"
+								},
+								{
+									"key": "jenis_produk",
+									"value": "elektronik",
+									"type": "text"
+								},
+								{
+									"key": "harga",
+									"value": "150",
+									"type": "text"
+								},
+								{
+									"key": "stok",
+									"value": "5000",
+									"type": "text"
+								},
+								{
+									"key": "gambar",
+									"value": "https://pulsaseluler.com/images/produk/pulsa/telkomsel-444-fgqo.png",
+									"type": "text"
+								},
+								{
+									"key": "deskripsi",
+									"value": "pulsa telkomsel 100k",
+									"type": "text"
+								},
+								{
+									"key": "nilai_pulsa",
+									"value": "100000",
+									"type": "text"
+								},
+								{
+									"key": "operator",
+									"value": "Telkomsel",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3200/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"products"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "UBDATE",
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "nama_produk",
+									"value": "dana",
+									"type": "text"
+								},
+								{
+									"key": "jenis_produk",
+									"value": "50000",
+									"type": "text"
+								},
+								{
+									"key": "harga",
+									"value": "100",
+									"type": "text"
+								},
+								{
+									"key": "stok",
+									"value": "9500",
+									"type": "text"
+								},
+								{
+									"key": "gambar",
+									"value": "https://yippy.id/_next/image?url=https%3A%2F%2Fyippy-prod.s3.ap-southeast-1.amazonaws.com%2Fimages%2FdYvtF8u36ScJb87q2F6EyyldGRp6MmuNZfsoAjeo.png&w=3840&q=75",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3200/products/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"products",
+								"2"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "DELETE",
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3200/products/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"products",
+								"1"
+							]
+						}
 					},
 					"response": []
 				}
@@ -50,31 +170,566 @@
 					"name": "GET",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3200/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"users"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "POST",
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "nama_lengkap",
+									"value": "kamuh intan",
+									"type": "text"
+								},
+								{
+									"key": "alamat",
+									"value": "kaudtan",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "intankamuhmaharani@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "nomor_telepon",
+									"value": "089766544722",
+									"type": "text"
+								},
+								{
+									"key": "tanggal_lahir",
+									"value": "2003-02-02",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "jenis_kelamin",
+									"value": "Perempuan",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "pekerjaan",
+									"value": "Frontend Developer",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "tanngal_bergabung",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3200/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"users"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "UBDATE",
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "nama_lengkap",
+									"value": "faith masjuri",
+									"type": "text"
+								},
+								{
+									"key": "alamat",
+									"value": "kaima minawerot",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "faithmsjuri@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "nomor_telepon",
+									"value": "6282238263337",
+									"type": "text"
+								},
+								{
+									"key": "tanggal_lahir",
+									"value": "2002-01-01",
+									"type": "text"
+								},
+								{
+									"key": "jenis_kelamin",
+									"value": "Perempuan",
+									"type": "text"
+								},
+								{
+									"key": "pekerjaan",
+									"value": "Backend Developer",
+									"type": "text"
+								},
+								{
+									"key": "tanggal_bergabung",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3200/users/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"users",
+								"2"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "DELETE",
 					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3200/users/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"users",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "mission",
+			"item": [
+				{
+					"name": "GET",
+					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3200/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Rawat tanaman\",\r\n  \"description\": \"Tanamlah pohon dan upload foto perkembangannya selama 7 hari\",\r\n  \"point\": 500,\r\n  \"gambar\": \"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmcBkpTc3cRNXeu9o3q3QyhTYd087Kx7toB_79jWZVBw%26s\",\r\n  \"logo\": \"https://png.pngtree.com/png-clipart/20221231/original/pngtree-big-tree-design-logo-png-image_8837583.png\",\r\n  \"duration\": \"7 hari\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3200/missions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"missions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UBDATE",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "Posting artikel",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Buatkan artikel bertema kebersihan lalu posting di health",
+									"type": "text"
+								},
+								{
+									"key": "point",
+									"value": "50",
+									"type": "text"
+								},
+								{
+									"key": "gambar",
+									"value": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmcBkpTc3cRNXeu9o3q3QyhTYd087Kx7toB_79jWZVBw%26s",
+									"type": "text"
+								},
+								{
+									"key": "logo",
+									"value": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmcBkpTc3cRNXeu9o3q3QyhTYd087Kx7toB_79jWZVBw%26s",
+									"type": "text"
+								},
+								{
+									"key": "duration",
+									"value": "2 hari",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3200/missions/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"missions",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3200/missions/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"missions",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "invite",
+			"item": [
+				{
+					"name": "GET",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3200/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 1,\r\n  \"title\": \"Rawat tanaman\",\r\n  \"description\": \"Tanamlah pohon dan upload foto perkembangannya selama 7 hari\",\r\n  \"point\": 500,\r\n  \"gambar\": \"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmcBkpTc3cRNXeu9o3q3QyhTYd087Kx7toB_79jWZVBw%26s\",\r\n  \"logo\": \"https://png.pngtree.com/png-clipart/20221231/original/pngtree-big-tree-design-logo-png-image_8837583.png\",\r\n  \"duration\": 7\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3200/missions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"missions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UBDATE",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "nama_sender",
+									"value": "intan",
+									"type": "text"
+								},
+								{
+									"key": "nama_receiver",
+									"value": "beverly",
+									"type": "text"
+								},
+								{
+									"key": "kode_sender",
+									"value": "DJ3KFJ5K",
+									"type": "text"
+								},
+								{
+									"key": "kode_receiver",
+									"value": "NR3TN5J",
+									"type": "text"
+								},
+								{
+									"key": "tanggal_bergabung",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3200/invites/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"invites",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3200/invite/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"invite",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "history",
+			"item": [
+				{
+					"name": "GET",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3200/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 1,\r\n  \"title\": \"Rawat tanaman\",\r\n  \"description\": \"Tanamlah pohon dan upload foto perkembangannya selama 7 hari\",\r\n  \"point\": 500,\r\n  \"gambar\": \"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmcBkpTc3cRNXeu9o3q3QyhTYd087Kx7toB_79jWZVBw%26s\",\r\n  \"logo\": \"https://png.pngtree.com/png-clipart/20221231/original/pngtree-big-tree-design-logo-png-image_8837583.png\",\r\n  \"duration\": 7\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3200/missions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"missions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UBDATE",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "tanggal_transaksi",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "nama_produk",
+									"value": "pulsa",
+									"type": "text"
+								},
+								{
+									"key": "jenis_produk",
+									"value": "elektronik",
+									"type": "text"
+								},
+								{
+									"key": "ProductId",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "deskripsi",
+									"value": "pulsa telkomsel 200k ditukar dengan 100point",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3200/historys/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"historys",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3200/historys/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"historys",
+								"1"
+							]
+						}
 					},
 					"response": []
 				}
