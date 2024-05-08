@@ -18,12 +18,12 @@ const insertMission = async(newMissionsData) => {
     try {
         const mission = await prisma.mission.create({
             data: {
-                title: newMissionsData.nama_lengkap,
-                description: newMissionsData.alamat,
-                point: newMissionsData.email,
-                gambar: newMissionsData.nomor_telepon,
-                logo: newMissionData.tanggal_lahir,
-                duration: newMissionData.jenis_kelamin
+                title: newMissionsData.title,
+                description: newMissionsData.description,
+                point: newMissionsData.point,
+                gambar: newMissionsData.gambar,
+                logo: newMissionsData.logo,
+                duration: newMissionsData.duration
             }
         });
         return mission;
@@ -50,7 +50,7 @@ const ubdateMission = async(id, missionData) => {
         data: {
             title: missionData.title,
             description: missionData.description,
-            point: missionData.point,
+            point: parseFloat(missionData.point),
             gambar: missionData.gambar,
             logo: missionData.logo,
             duration: missionData.duration

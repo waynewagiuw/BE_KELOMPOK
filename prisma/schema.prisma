@@ -33,7 +33,7 @@ model user {
 
 model history {
   id                 Int      @id @default(autoincrement())
-  tanggal_transasksi DateTime @default(now())
+  tanggal_transaksi DateTime @default(now())
   nama_produk        String   @db.VarChar(45)
   jenis_produk       String   @db.VarChar(45)
   productId          Int?

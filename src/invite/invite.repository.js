@@ -48,11 +48,11 @@ const ubdateInvite = async(id, inviteData) => {
             id: parseInt(id),
         },
         data: {
-            nama_sender: invitesData.nama_lengkap,
-            nama_receiver: invitesData.alamat,
-            kode_sender: invitesData.email,
-            kode_receiver: inviteData.nomor_telepon,
-            status: inviteData.tanggal_lahir,
+            nama_sender: inviteData.nama_sender,
+            nama_receiver: inviteData.nama_receiver,
+            kode_sender: inviteData.kode_sender,
+            kode_receiver: inviteData.kode_receiver,
+            status: inviteData.status,
             tanggal_bergabung: new Date(),
 
 

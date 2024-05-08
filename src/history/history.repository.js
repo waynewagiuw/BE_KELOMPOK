@@ -50,11 +50,7 @@ const ubdateHistory = async (id, historyData) => {
             tanggal_transaksi: new Date(), 
             nama_produk: historyData.nama_produk,
             jenis_produk: historyData.jenis_produk,
-            product: {
-              connect: {
-                id: historyData.productId
-              }
-            },
+            productId: parseInt(historyData.productId),
             deskripsi: historyData.deskripsi
           },
     });
